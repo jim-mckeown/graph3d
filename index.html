@@ -19,7 +19,7 @@
       data = new vis.DataSet();
 
       // create some nice looking data with sin/cos
-      var steps = 314;
+      var steps = 360;
       var zTheta = 0;
       var thetaMax = 0;
       var vectorMean = 1/6;
@@ -29,10 +29,10 @@
       //var axisStep = axisMax / steps;
       for (var t = 0; t < steps; t++) {
         var r = 1;
-        var x = r * Math.cos(t/50);
-        var y = r * Math.sin(t/50);
+        var x = r * Math.cos(t * Math.PI / 180);
+        var y = r * Math.sin(t * Math.PI / 180);
         //var z = t / tmax;
-        var z = Math.cos(t/50 - thetaMax)*(2 * vectorMean) + mean;
+        var z = Math.cos((t * Math.PI / 180) - thetaMax)*(2 * vectorMean) + mean;
         data.add({x:x,y:y,z:z});
       }
 

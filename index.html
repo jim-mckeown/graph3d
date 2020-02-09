@@ -32,7 +32,7 @@
         var x = r * Math.cos(t/50);
         var y = r * Math.sin(t/50);
         //var z = t / tmax;
-        var z = cos(t - thetaMax)*(2 * vectorMean) + mean;
+        var z = Math.cos(t - thetaMax)*(2 * vectorMean) + mean;
         data.add({x:x,y:y,z:z});
       }
 
